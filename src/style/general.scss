@@ -1,0 +1,12 @@
+@use './partials/reset';
+@use './partials/variables';
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+html {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
