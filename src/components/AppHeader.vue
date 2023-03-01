@@ -1,6 +1,22 @@
 <script>
 export default {
-
+    data() {
+        return {
+            navbarItems: [
+                'characters',
+                'comics',
+                'movies',
+                'tv',
+                'games',
+                'collectibles',
+                'videos',
+                'fans',
+                'news',
+                'shop'
+            ],
+            activeIndex: 1
+        }
+    }
 }
 </script>
 
@@ -13,16 +29,7 @@ export default {
             <div class="col">
                 <nav>
                     <ul class="navbar">
-                        <li class="nav-item">Characters</li>
-                        <li class="nav-item active">Comics</li>
-                        <li class="nav-item">Movies</li>
-                        <li class="nav-item">Tv</li>
-                        <li class="nav-item">Games</li>
-                        <li class="nav-item">Collectibles</li>
-                        <li class="nav-item">Videos</li>
-                        <li class="nav-item">Fans</li>
-                        <li class="nav-item">News</li>
-                        <li class="nav-item">Shop</li>
+                        <li v-for="(element, index) in navbarItems" :class="index === activeIndex ? 'active' : ''" class="nav-item"> {{ element }}</li>
                     </ul>
                 </nav>
             </div>
