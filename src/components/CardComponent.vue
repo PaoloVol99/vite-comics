@@ -28,6 +28,12 @@ export default {
         aspect-ratio: 1;
         object-fit: cover;
     }
+
+    h3 {
+        font-weight: 300;
+        font-size: 16px;
+        margin-top: 10px;
+    }
 }
 
 </style>
