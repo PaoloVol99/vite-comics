@@ -1,5 +1,10 @@
 <script>
+import AppBonusComponent from './AppBonusComponent.vue'
+
 export default {
+    components: {
+        AppBonusComponent,
+    },
     data() {
         return {
             dcComics: [
@@ -42,54 +47,59 @@ export default {
 </script>
 
 <template>
-    <div class="footer-main">
-        <div class="container">
-            <div class="col">
-                <div class="footer-links-wrapper">
-                    <div class="col">
-                        <h3>dc comics</h3>
-                        <ul>
-                            <li v-for="element in dcComics"> {{ element }}</li>
-                        </ul>
-                        <h3>shop</h3>
-                        <ul>
-                            <li v-for="element in shop">{{ element }}</li>
-                        </ul>
-                    </div>
-                    <div class="col">
-                        <h3>dc</h3>
-                        <ul>
-                            <li v-for="element in dc">{{ element }}</li>
-                        </ul>
-                    </div>
-                    <div class="col">
-                        <h3>sites</h3>
-                        <ul>
-                            <li v-for="element in sites">{{ element }}</li>
-                        </ul>
+    <footer>
+        
+        <AppBonusComponent />
+    
+        <div class="footer-main">
+            <div class="container">
+                <div class="col">
+                    <div class="footer-links-wrapper">
+                        <div class="col">
+                            <h3>dc comics</h3>
+                            <ul>
+                                <li v-for="element in dcComics"> {{ element }}</li>
+                            </ul>
+                            <h3>shop</h3>
+                            <ul>
+                                <li v-for="element in shop">{{ element }}</li>
+                            </ul>
+                        </div>
+                        <div class="col">
+                            <h3>dc</h3>
+                            <ul>
+                                <li v-for="element in dc">{{ element }}</li>
+                            </ul>
+                        </div>
+                        <div class="col">
+                            <h3>sites</h3>
+                            <ul>
+                                <li v-for="element in sites">{{ element }}</li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="col">
-                <img src="/img/dc-logo-bg.png" alt="">
-            </div>
-        </div>
-    </div>
-    <div class="footer-end">
-        <div class="container">
-            <div class="footer-socials">
-                <button>sign-up now!</button>
-                <div class="socials-wrapper">
-                    <span class="follow">follow us</span>
-                    <img src="/img/footer-facebook.png" alt="">
-                    <img src="/img/footer-twitter.png" alt="">
-                    <img src="/img/footer-youtube.png" alt="">
-                    <img src="/img/footer-pinterest.png" alt="">
-                    <img src="/img/footer-periscope.png" alt="">
+                <div class="col">
+                    <img src="/img/dc-logo-bg.png" alt="">
                 </div>
             </div>
         </div>
-    </div>
+        <div class="footer-end">
+            <div class="container">
+                <div class="footer-socials">
+                    <button>sign-up now!</button>
+                    <div class="socials-wrapper">
+                        <span class="follow">follow us</span>
+                        <img src="/img/footer-facebook.png" alt="">
+                        <img src="/img/footer-twitter.png" alt="">
+                        <img src="/img/footer-youtube.png" alt="">
+                        <img src="/img/footer-pinterest.png" alt="">
+                        <img src="/img/footer-periscope.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
 </template>
 
 <style lang="scss" scoped>
